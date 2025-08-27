@@ -32,14 +32,5 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
-  composer:
-    image: composer:2
-    container_name: composer
-    volumes:
-      - ./src:/var/www/html
-    working_dir: /var/www/html
-    depends_on:
-      - php
-
 volumes:
   pgdata:
